@@ -57,7 +57,7 @@ const IconBsSearch = styled(BsSearch)`
   /* clip-path: inset(50%); */
   border: 0;
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-  :hover {
+  ${SearchFormButton}:hover & {
     color: ${p => p.theme.colors.halloween[0]};
     transform: scale(1.3);
   }
@@ -71,11 +71,16 @@ const SearchFormInput = styled(Field)`
   font-size: 22px;
   border: none;
   outline: none;
-  padding-left: 4px;
+  padding-left: 16px;
   padding-right: 4px;
   ::placeholder {
     font: inherit;
     font-size: 22px;
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover::placeholder {
+    color: ${p => p.theme.colors.halloween[0]};
+    letter-spacing: ${p => p.theme.space[1]}px;
   }
 `;
 
