@@ -28,7 +28,8 @@ const Searchbar = ({ onSubmit }) => {
         onSubmit={handleSubmit}>
         {({ isSubmitting }) => (
           <SearchForm>
-            <SearchFormButton type="submit">
+            <SearchFormButton
+              type="submit" disabled={isSubmitting}>
               <IconBsSearch />
             </SearchFormButton>
             <SearchFormInput
